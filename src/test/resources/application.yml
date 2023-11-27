@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 9090
 datasource:
   school:
     url: jdbc:mysql://localhost:3306/schooldb?userSSL=false&serverTimezone=UTC
@@ -27,3 +27,4 @@ spring:
 #        type:
 #          descriptor:
 #            sql: trace
+
