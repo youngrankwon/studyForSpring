@@ -1,16 +1,27 @@
 datasource:
   school:
     url: jdbc:mysql://localhost:3306/schooldb?userSSL=false&serverTimezone=UTC
-    username: school
-    password: school
+    username: ranTest
+    password: Eodfks$$2022
   student:
     url: jdbc:mysql://localhost:3306/studentdb?userSSL=false&serverTimezone=UTC
-    username: student
-    password: student
+    username: ranTest
+    password: Eodfks$$2022
 spring:
   jpa:
     database: mysql
-    hibernate:
-      ddl-auto: update
     generate-ddl: true
-    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        ddl-auto: update
+        format_sql: true
+        highlight_sql: true
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: debug
+#        type:
+#          descriptor:
+#            sql: trace
