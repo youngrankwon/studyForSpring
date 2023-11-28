@@ -1,9 +1,13 @@
-package com.study.spring.testingweb;
+package com.study.spring.testingweb.test;
 
+import com.study.spring.TestingWebApp;
+import com.study.spring.testingweb.GreetingController;
+import com.study.spring.testingweb.GreetingService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.containsString;
@@ -14,6 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(GreetingController.class)
+@ContextConfiguration(classes = TestingWebApp.class)
 public class WebMockTest {
 
     @Autowired
