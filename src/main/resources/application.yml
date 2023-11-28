@@ -1,14 +1,19 @@
 server:
   port: 8080
+
+jasypt:
+  encryptor:
+    bean: jasyptEncryptorAES
+
 datasource:
   school:
     url: jdbc:mysql://localhost:3306/schooldb?userSSL=false&serverTimezone=UTC
-    username: ranTest
-    password: Eodfks$$2022
+    username: ENC(KcBJfNGUyq+2/eONFBliSoG9VfK9sKMmMEE0cobefzOyntgmYbFhr7FNCArukmo9)
+    password: ENC(unvPqXwHO/EY2iQMF6olzuFACfoHQX14XSfryaaPelyMlOnIn9Q/Jy/5cZAvggQz)
   student:
     url: jdbc:mysql://localhost:3306/studentdb?userSSL=false&serverTimezone=UTC
-    username: ranTest
-    password: Eodfks$$2022
+    username: ENC(KcBJfNGUyq+2/eONFBliSoG9VfK9sKMmMEE0cobefzOyntgmYbFhr7FNCArukmo9)
+    password: ENC(unvPqXwHO/EY2iQMF6olzuFACfoHQX14XSfryaaPelyMlOnIn9Q/Jy/5cZAvggQz)
 spring:
   jpa:
     database: mysql

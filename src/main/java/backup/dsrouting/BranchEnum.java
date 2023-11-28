@@ -7,8 +7,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum BranchEnum {
 
-	KOREA("korea"), JAPAN("japan");
-	
-	private final String name;
+    KOREA("korea"), JAPAN("japan");
+
+    private final String name;
 
 }
