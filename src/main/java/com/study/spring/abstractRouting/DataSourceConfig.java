@@ -1,5 +1,6 @@
-package backup.dsrouting;
+package com.study.spring.abstractRouting;
 
+import com.study.spring.abstractRouting.repository.Employee;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,9 +22,9 @@ import java.util.Map;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-        basePackages = "com.study.spring.dsrouting.repository",
-        entityManagerFactoryRef = "entityManagerFactory",
-        transactionManagerRef = "transactionManager"
+        basePackages = "com.study.spring.abstractRouting.repository",
+        entityManagerFactoryRef = "commonEntityManagerFactory",
+        transactionManagerRef = "commonTransactionManager"
 )
 public class DataSourceConfig {
 
@@ -71,16 +72,16 @@ public class DataSourceConfig {
                 .build();
     }
 
-    @Bean(name = "entityManager")
-    public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(
+    @Bean(name = "commonEntityManagerFactory")
+    public LocalContainerEntityManagerFactoryBean commonEntityManagerFactory(
             EntityManagerFactoryBuilder builder) {
         return builder.dataSource(dataSource()).packages(Employee.class)
                 .build();
     }
 
-    @Bean(name = "transcationManager")
-    public JpaTransactionManager transactionManager(
-            @Autowired @Qualifier("entityManager") LocalContainerEntityManagerFactoryBean entityManagerFactoryBean) {
+    @Bean(name = "commonTransactionManager")
+    public JpaTransactionManager commonTransactionManager(
+            @Autowired @Qualifier("commonEntityManagerFactory") LocalContainerEntityManagerFactoryBean entityManagerFactoryBean) {
         return new JpaTransactionManager(entityManagerFactoryBean.getObject());
     }
 

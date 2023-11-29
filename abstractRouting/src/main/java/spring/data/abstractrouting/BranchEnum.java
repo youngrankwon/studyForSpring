@@ -1,4 +1,4 @@
-package backup.dsrouting;
+package spring.data.abstractrouting;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

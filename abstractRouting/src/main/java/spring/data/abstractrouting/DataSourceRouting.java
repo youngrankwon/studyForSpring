@@ -1,4 +1,4 @@
-package backup.dsrouting;
+package spring.data.abstractrouting;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 

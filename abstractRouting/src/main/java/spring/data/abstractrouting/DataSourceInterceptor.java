@@ -1,4 +1,4 @@
-package backup.dsrouting;
+package spring.data.abstractrouting;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -9,14 +9,13 @@ import org.springframework.web.servlet.HandlerInterceptor;
 public class DataSourceInterceptor implements HandlerInterceptor {
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws
-            Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
 
         String branch = request.getHeader("branch");
-        if (BranchEnum.KOREA.toString().equalsIgnoreCase(branch)) {
-            BranchContextHolder.setBranchContext(BranchEnum.KOREA);
-        } else {
+        if (BranchEnum.JAPAN.toString().equalsIgnoreCase(branch)) {
             BranchContextHolder.setBranchContext(BranchEnum.JAPAN);
+        } else if(BranchEnum.KOREA.toString().equalsIgnoreCase(branch)) {
+            BranchContextHolder.setBranchContext(BranchEnum.KOREA);
         }
         return true;
     }

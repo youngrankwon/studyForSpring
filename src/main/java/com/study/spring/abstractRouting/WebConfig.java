@@ -1,4 +1,4 @@
-package backup.dsrouting;
+package com.study.spring.abstractRouting;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;

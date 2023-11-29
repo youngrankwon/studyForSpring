@@ -1,5 +1,4 @@
-package backup.dsrouting;
-
+package spring.data.multirouting.repository.student;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -10,12 +9,14 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "student")
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String branch;
+    private int age;
+
+
 }
