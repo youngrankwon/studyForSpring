@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.study.spring.abstractRouting"})
 public class StudyForSpringApplication {
 
     public static void main(String[] args) {

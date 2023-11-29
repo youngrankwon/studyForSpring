@@ -1,15 +1,12 @@
 server:
   port: 9090
-datasource:
-  school:
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/schooldb?userSSL=false&serverTimezone=UTC
     username: ranTest
     password: Eodfks$$2022
-  student:
-    url: jdbc:mysql://localhost:3306/studentdb?userSSL=false&serverTimezone=UTC
-    username: ranTest
-    password: Eodfks$$2022
-spring:
   jpa:
     database: mysql
     generate-ddl: true

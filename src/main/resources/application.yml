@@ -22,6 +22,7 @@ datasource:
     url: jdbc:mysql://localhost:3306/japandb?userSSL=false&serverTimezone=UTC
     username: ENC(KcBJfNGUyq+2/eONFBliSoG9VfK9sKMmMEE0cobefzOyntgmYbFhr7FNCArukmo9)
     password: ENC(unvPqXwHO/EY2iQMF6olzuFACfoHQX14XSfryaaPelyMlOnIn9Q/Jy/5cZAvggQz)
+
 spring:
   jpa:
     database: mysql
