@@ -5,25 +5,12 @@ jasypt:
   encryptor:
     bean: jasyptEncryptorAES
 
-datasource:
-  school:
-    url: jdbc:mysql://localhost:3306/schooldb?userSSL=false&serverTimezone=UTC
-    username: ENC(KcBJfNGUyq+2/eONFBliSoG9VfK9sKMmMEE0cobefzOyntgmYbFhr7FNCArukmo9)
-    password: ENC(unvPqXwHO/EY2iQMF6olzuFACfoHQX14XSfryaaPelyMlOnIn9Q/Jy/5cZAvggQz)
-  student:
-    url: jdbc:mysql://localhost:3306/studentdb?userSSL=false&serverTimezone=UTC
-    username: ENC(KcBJfNGUyq+2/eONFBliSoG9VfK9sKMmMEE0cobefzOyntgmYbFhr7FNCArukmo9)
-    password: ENC(unvPqXwHO/EY2iQMF6olzuFACfoHQX14XSfryaaPelyMlOnIn9Q/Jy/5cZAvggQz)
-  korea:
-    url: jdbc:mysql://localhost:3306/koreadb?userSSL=false&serverTimezone=UTC
-    username: ENC(KcBJfNGUyq+2/eONFBliSoG9VfK9sKMmMEE0cobefzOyntgmYbFhr7FNCArukmo9)
-    password: ENC(unvPqXwHO/EY2iQMF6olzuFACfoHQX14XSfryaaPelyMlOnIn9Q/Jy/5cZAvggQz)
-  japan:
-    url: jdbc:mysql://localhost:3306/japandb?userSSL=false&serverTimezone=UTC
-    username: ENC(KcBJfNGUyq+2/eONFBliSoG9VfK9sKMmMEE0cobefzOyntgmYbFhr7FNCArukmo9)
-    password: ENC(unvPqXwHO/EY2iQMF6olzuFACfoHQX14XSfryaaPelyMlOnIn9Q/Jy/5cZAvggQz)
-
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dbo?userSSL=false&serverTimezone=UTC
+    username: ENC(KcBJfNGUyq+2/eONFBliSoG9VfK9sKMmMEE0cobefzOyntgmYbFhr7FNCArukmo9)
+    password: ENC(unvPqXwHO/EY2iQMF6olzuFACfoHQX14XSfryaaPelyMlOnIn9Q/Jy/5cZAvggQz)
   jpa:
     database: mysql
     generate-ddl: true
